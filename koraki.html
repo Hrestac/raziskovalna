@@ -47,7 +47,65 @@ body {
   padding-right: 20%;
   text-align: justify;
 }
+  .rightans { background-color: #c8e6c9; } /* zelena za pravilne odgovore */
+        .wrongans { background-color: #ffcdd2; } /* rdeča za napačne odgovore */
 </style>
+   <script>
+        'use strict';
+        window.onload = init;
+
+        function init() {
+            document.getElementById('btn').onclick = validateText;
+            document.getElementById('btnclr').onclick = clearText;
+        }
+
+        function validateText() {
+            // Pridobi vsa polja z besedilom v obrazcu z ID-jem "quiz"
+            var textInputs = document.getElementById("quiz").getElementsByTagName("input");
+            var right = 0;
+            var wrong = 0;
+
+            // Pravilni odgovori (lahko jih prilagodiš)
+            var correctAnswers = {
+                "q1": "slovenija", // ID polja: pravilni odgovor
+                "q2": "ljubljana",
+                "q3": "triglav"
+            };
+
+            for (var i = 0, len = textInputs.length; i < len; i++) {
+                var input = textInputs[i];
+                var answer = input.value.trim().toLowerCase(); // Očisti presledke in pretvori v male črke
+
+                if (correctAnswers[input.id]) { // Preveri, če ima polje pričakovan odgovor
+                    if (answer === correctAnswers[input.id]) {
+                        right++;
+                        input.className = 'rightans'; // Obarva pravilno polje
+                    } else {
+                        wrong++;
+                        input.className = 'wrongans'; // Obarva napačno polje
+                    }
+                }
+            }
+
+            // Izračun in prikaz rezultatov
+            var pcnt = (100 * right / (wrong + right)).toFixed(1);
+            document.getElementById("score").innerHTML = 'Pravilno: ' + right + 
+                '<br/>Napačno: ' + wrong + 
+                '<br/>Odstotek pravilnih odgovorov: ' + pcnt + '%';
+        }
+
+        function clearText() {
+            // Ponastavi vsa polja z besedilom v obrazcu
+            var textInputs = document.getElementById("quiz").getElementsByTagName("input");
+            for (var i = 0, len = textInputs.length; i < len; i++) {
+                textInputs[i].value = ''; // Pobriše vnos
+                textInputs[i].className = ''; // Odstrani barve
+            }
+
+            // Počisti rezultate
+            document.getElementById("score").innerHTML = '';
+        }
+    </script>
 </head>
 <body>
 
@@ -83,5 +141,22 @@ body {
 20. Releve = dvignjeno. <br>
 21. Rond de Jambe = krog noge. <br>
 22. Tendu = raztezati. </p>
+
+  <br> <br>
+<h1>Kviz: Preverjanje besedila</h1>
+    <form id="quiz">
+        <label for="q1">1. Katera država ima Triglav?</label><br>
+        <input type="text" id="q1"><br><br>
+
+        <label for="q2">2. Glavno mesto Slovenije?</label><br>
+        <input type="text" id="q2"><br><br>
+
+        <label for="q3">3. Najvišji vrh Slovenije?</label><br>
+        <input type="text" id="q3"><br><br>
+    </form>
+    <button id="btn">Preveri</button>
+    <button id="btnclr">Počisti</button>
+    <div id="score"></div>
+  
 </body>
 </html>
