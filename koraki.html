@@ -69,7 +69,7 @@ else
 
 
 var pcnt = (100 * right / (wrong + right)).toFixed(1); document.getElementById("score").innerHTML = 'Pravilni: ' + right + '<br/>Napačni: ' + wrong + '<br/>Odstotek: ' + pcnt + '%'; } 
-function clear() { var radios = document.getElementById("kviz").getElementsByTagName("INPUT"); for (var i = 0, len = radios.length; i < len; i++) { radios[i].checked = false; if (radios[i].value == "x") { radios[i].parentNode.parentNode.className = ''; } } document.getElementById("score").innerHTML = ''; }</script>
+function izbrisi() { var radios = document.getElementById("kviz").getElementsByTagName("INPUT"); for (var i = 0, len = radios.length; i < len; i++) { radios[i].checked = false; if (radios[i].value == "x") { radios[i].parentNode.parentNode.className = ''; } } document.getElementById("score").innerHTML = ''; }</script>
 
 </head>
 <body>
