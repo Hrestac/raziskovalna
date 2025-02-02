@@ -58,7 +58,7 @@ body {
 }
 </style>
 <script>window.onerror = function (m, u, l) { alert('Javascript Error: ' + m + 'nURL: ' + u + 'nLine Number: ' + l); return true; }</script>
-<script>'use strict'; window.onload = init; function init() { document.getElementById('gumb').onclick = preveri; document.getElementById('gumbB').onclick = izbrisi; } 
+<script>'use strict'; window.onload = init; function init() { document.getElementById('gumb').onclick = preveri; document.getElementById('gumbB').onclick = clear; } 
 function preveri() { var radios = document.getElementById("kviz").getElementsByTagName("INPUT"); var right = 0; var wrong = 0;
 for (var i = 0, len = radios.length; i < len; i++) 
 { if (radios[i].value == "x") 
@@ -69,7 +69,7 @@ else
 
 
 var pcnt = (100 * right / (wrong + right)).toFixed(1); document.getElementById("score").innerHTML = 'Pravilni: ' + right + '<br/>Napačni: ' + wrong + '<br/>Odstotek: ' + pcnt + '%'; } 
-function izbrisi() { var radios = document.getElementById("kviz").getElementsByTagName("INPUT"); for (var i = 0, len = radios.length; i < len; i++) { radios[i].checked = false; if (radios[i].value == "x") { radios[i].parentNode.parentNode.className = ''; } } document.getElementById("score").innerHTML = ''; }</script>
+function clear() { var radios = document.getElementById("kviz").getElementsByTagName("INPUT"); for (var i = 0, len = radios.length; i < len; i++) { radios[i].checked = false; if (radios[i].value == "x") { radios[i].parentNode.parentNode.className = ''; } } document.getElementById("score").innerHTML = ''; }</script>
 
 </head>
 <body>
@@ -80,7 +80,7 @@ function izbrisi() { var radios = document.getElementById("kviz").getElementsByT
   <li><a class="active" href="#koraki">Koraki</a></li>
    <li><a href="pozicije.html">Pozicije</a></li>
   
-  <li style="float:right"><a href="viri.html">Viri</a></li>
+  <li style="float:right"><a href="#about">Viri</a></li>
 </ul>
 <h1 class="naslovi">NAJPOMEMBNEJŠI BALETNI KORAKI/IZRAZI</h1>
 <p class="rob"> Spodaj je naštetih nekaj najpomembnejših baletnih korakov/izrazov v francoščini in nato še njihov dobesedni pomen v slovenščini. <br>
@@ -106,7 +106,8 @@ function izbrisi() { var radios = document.getElementById("kviz").getElementsByT
 20. Releve = dvignjeno. <br>
 21. Rond de Jambe = krog noge. <br>
 22. Tendu = raztezati. </p>
-
+<br> <br> <br>
+<img src="balet.jpg" alt="balet" class="rob" width="500" height="300">
   <br> <br> <br>
   <div class="rob" id="kviz">
     <h1 class="naslovi"> Kviz</h1>
@@ -149,6 +150,5 @@ function izbrisi() { var radios = document.getElementById("kviz").getElementsByT
 </div><input style="margin-left: 20%;" type="button" id="gumb" value="Preveri odgovore" />
 <input  type="button" id="gumbB" value="Izbriši" />
 <h2 class="rob" id="score"></h2>
-  
 </body>
 </html>
