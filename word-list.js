@@ -1,31 +1,31 @@
 const wordList = [
     {
         word: "balet",
-        hint: "ples."
+        hint: "Klasična plesna oblika."
     },
     {
-        word: "oxygen",
-        hint: "A colorless, odorless gas essential for life."
+        word: "gledališče",
+        hint: "Prostor, kjer se izvajajo baletne predstave."
     },
     {
-        word: "mountain",
-        hint: "A large natural elevation of the Earth's surface."
+        word: "drog",
+        hint: "V baletni dvorani je na steni lesen baletni _____."
     },
     {
-        word: "painting",
-        hint: "An art form using colors on a surface to create images or expression."
+        word: "figo",
+        hint: "Balerine imajo lase spete v _____."
     },
     {
-        word: "astronomy",
-        hint: "The scientific study of celestial objects and phenomena."
+        word: "tutu",
+        hint: "Najbolj značilen baletni kostum."
     },
     {
-        word: "football",
-        hint: "A popular sport played with a spherical ball."
+        word: "Hrestač",
+        hint: "Balet, ki govori o deklici Klari, ki za božič dobi posebno lutko."
     },
     {
-        word: "chocolate",
-        hint: "A sweet treat made from cocoa beans."
+        word: "orkester",
+        hint: "Velik ansambel glasbenikov, ki spremljajo baletno predstavo."
     },
     {
         word: "butterfly",
@@ -80,10 +80,6 @@ const wordList = [
         hint: "A vast system of stars, gas, and dust held together by gravity."
     },
     {
-        word: "orchestra",
-        hint: "A large ensemble of musicians playing various instruments."
-    },
-    {
         word: "volcano",
         hint: "A mountain or hill with a vent through which lava, rock fragments, hot vapor, and gas are ejected."
     },
@@ -102,10 +98,6 @@ const wordList = [
     {
         word: "architecture",
         hint: "The art and science of designing and constructing buildings."
-    },
-    {
-        word: "ballet",
-        hint: "A classical dance form characterized by precise and graceful movements."
     },
     {
         word: "astronaut",
