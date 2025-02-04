@@ -20,7 +20,7 @@ const wordList = [
         hint: "Najbolj značilen baletni kostum."
     },
     {
-        word: "Hrestač",
+        word: "hrestac",
         hint: "Balet, ki govori o deklici Klari, ki za božič dobi posebno lutko."
     },
     {
