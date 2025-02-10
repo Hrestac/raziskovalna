@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="building.png">
+<style>
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #55afed;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ 
+li a:hover:not(.active) {
+  background-color: #a4d4f5;
+}
+
+.active {
+  background-color: #0590f0;
+}
+
+body {
+  background-color: #d3e7f5;
+}
+.naslovi {
+  color:#0590f0;
+  text-align: center;
+}
+.rob {
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: justify;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="index.html" href="#home">Domov</a></li>
+  <li><a href="osnovno.html">Osnovno</a></li>
+  <li><a href="koraki.html">Koraki</a></li>
+   <li><a href="pozicije.html">Pozicije</a></li>
+   <li><a class="active" href="#vaja">Ponovim</a></li>
+  
+  <li style="float:right"><a href="viri.html">Viri</a></li>
+</ul>
+<iframe src="hangman.html" width="100%" height="600px" style="border:none;"></iframe>
+</body>
+</html>
