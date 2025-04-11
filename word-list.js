@@ -4,7 +4,7 @@ const wordList = [
         hint: "Klasična plesna oblika."
     },
     {
-        word: "gledalisce",
+        word: "gledališče",
         hint: "Prostor, kjer se izvajajo baletne predstave."
     },
     {
@@ -20,7 +20,7 @@ const wordList = [
         hint: "Najbolj značilen baletni kostum."
     },
     {
-        word: "hrestac",
+        word: "hrestač",
         hint: "Balet, ki govori o deklici Klari, ki za božič dobi posebno lutko."
     },
     {
@@ -28,7 +28,7 @@ const wordList = [
         hint: "Velik ansambel glasbenikov, ki spremljajo baletno predstavo."
     },
     {
-        word: "cajkovski",
+        word: "čajkovski",
         hint: "Skladatelj, ki je napisal več baletov."
     },
     {
