@@ -62,12 +62,23 @@ const initGame = (button, clickedLetter) => {
 }
 
 // Creating keyboard buttons and adding event listeners
-for (let i = 97; i <= 122; i++) {
+/*for (let i = 97; i <= 122; i++) {
     const button = document.createElement("button");
     button.innerText = String.fromCharCode(i);
     keyboardDiv.appendChild(button);
     button.addEventListener("click", (e) => initGame(e.target, String.fromCharCode(i)));
-}
+}*/
+const slovenskaAbeceda = ["a", "b", "c", "č", "d", "e", "f", "g", "h", "i", "j", "k",
+                          "l", "m", "n", "o", "p", "r", "s", "š", "t", "u", "v", 
+                          "z", "ž"];
+
+slovenskaAbeceda.forEach(črka => {
+    const button = document.createElement("button");
+    button.innerText = črka;
+    keyboardDiv.appendChild(button);
+    button.addEventListener("click", (e) => initGame(e.target, črka));
+});
+
 
 getRandomWord();
 playAgainBtn.addEventListener("click", getRandomWord);
